@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0069081-46bd-42db-a1ef-70ecf411a43d" name="Changes" comment="strategy design pattern">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_07_22_19_52_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_07_22_19_52__Changes_.xml" afterDir="false" />
+    <list default="true" id="e0069081-46bd-42db-a1ef-70ecf411a43d" name="Changes" comment="ascii image added">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Ragnarok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Ragnarok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/AtomicBomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/AtomicBomb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/AttackMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/AttackMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Machinegun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Machinegun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Ragnarok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Ragnarok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/RayBeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/RayBeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/SpaceCraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/SpaceCraft.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658528379694</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ascii image added">
+      <created>1658530973624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658530973624</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="strategy design pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="strategy design pattern" />
+    <MESSAGE value="ascii image added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ascii image added" />
   </component>
 </project>
