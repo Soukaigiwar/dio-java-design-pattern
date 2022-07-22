@@ -1,0 +1,160 @@
+Index: src/player/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package player;\n\nimport java.util.Scanner;\n\npublic class Main {\n\n    public static void main(String[] args) {\n\n        AttackMode machineGun = new Machinegun();\n        AttackMode rayBeam = new RayBeam();\n        AttackMode atomicBomb = new AtomicBomb();\n        SpaceCraft ragnarok = new SpaceCraft(\"Player1\");\n        Scanner input = new Scanner(System.in);\n        String choice;\n\n        System.out.println(ragnarok.getPlayerName());\n        ragnarok.setAttackMode(machineGun);\n\n        ragnarok.mode();\n        ragnarok.mode();\n\n        ragnarok.setAttackMode(rayBeam);\n\n        ragnarok.mode();\n\n        ragnarok.setAttackMode(atomicBomb);\n\n        System.out.print(\"Do you like to use Atomic Bomb?\\nyes or no: \");\n        choice = input.next().toLowerCase();\n        if (choice.equals(\"yes\"));\n        else {\n            ragnarok.setAttackMode(machineGun);\n        }\n\n        ragnarok.mode();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/player/Main.java b/src/player/Main.java
+--- a/src/player/Main.java	(revision 3adcbb1325bbdb8e9a975e63f7b0d7b9fb628974)
++++ b/src/player/Main.java	(date 1658529263909)
+@@ -33,5 +33,8 @@
+         }
+ 
+         ragnarok.mode();
++
++        Ragnarok asciiImage = new Ragnarok();
++        asciiImage.print();
+     }
+ }
+Index: src/player/Ragnarok.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package player;\n\npublic class Ragnarok {\n\n    public void print(){\n                                     @                                                  \n                            &/                                                  \n                           &@                                                   \n                          %@(                                                   \n                         (&%                                                    \n                        /&&&                                                    \n                       /%@&                                        *            \n                      .#&%&                                   .(@               \n                     #(@@#(                               *(%@                  \n                    * #@&@.                           *(.&&                     \n                   ,,#&@@@                    .  &**/&&&                        \n                   ,#@%&&/   .&&#.          *....(@@(                           \n                  /#%*&&&&&            *, .,  *.#%&                             \n                 ####@&%%@         (/ (( (/,(# &#,                              \n                 ##&&&(&&       (%%*#((,/%*(%%&&%###%#%%%&#/                    \n                %(&&(@&&#%%%%%%%#(/(%&(&&(%  (/                                 \n                &.*@@&&%%%%%%(%&&%%%@    *( &                                   \n           (*&@@@%@&&& .,#@@@&&&&&%&&&(*%&,&                                    \n        ((*%&#&&###(((*&@@@&&&%%#%&&&@&&    ,..,/#%(/**,,***(#*                 \n      ###@@%%&%&%#%(&&&(( ,(#&&&%&%&%%##%##%%#(/  /%%%#//**#(#####(%%%%##.      \n    @&%%&&%%&%@@@#@@%%#,#%&@@@&&%%&%&&&@&&&&#&%##%%&%&%&*                       \n     /          *#*&&,&&&&&@@&&&, %@@( %&&%%&@@@&/&%&&#&&*                      \n           %#%/(%%&@#%*@@&&&&%%%     #&% &@/&&&%%*%#(#,%@                       \n      //@.             &&@@&@&&%#%#((   .       %%%%%%#&%                       \n                         /@(%&@&&/*,/(#&(           &&%%%%%%%&                  \n                          /&&&&%&%&&%.                   %%%%@&%%##             \n                            %@                                          *(/ \n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/player/Ragnarok.java b/src/player/Ragnarok.java
+--- a/src/player/Ragnarok.java	(revision 3adcbb1325bbdb8e9a975e63f7b0d7b9fb628974)
++++ b/src/player/Ragnarok.java	(date 1658530336700)
+@@ -2,33 +2,36 @@
+ 
+ public class Ragnarok {
+ 
+-    public void print(){
+-                                     @                                                  
+-                            &/                                                  
+-                           &@                                                   
+-                          %@(                                                   
+-                         (&%                                                    
+-                        /&&&                                                    
+-                       /%@&                                        *            
+-                      .#&%&                                   .(@               
+-                     #(@@#(                               *(%@                  
+-                    * #@&@.                           *(.&&                     
+-                   ,,#&@@@                    .  &**/&&&                        
+-                   ,#@%&&/   .&&#.          *....(@@(                           
+-                  /#%*&&&&&            *, .,  *.#%&                             
+-                 ####@&%%@         (/ (( (/,(# &#,                              
+-                 ##&&&(&&       (%%*#((,/%*(%%&&%###%#%%%&#/                    
+-                %(&&(@&&#%%%%%%%#(/(%&(&&(%  (/                                 
+-                &.*@@&&%%%%%%(%&&%%%@    *( &                                   
+-           (*&@@@%@&&& .,#@@@&&&&&%&&&(*%&,&                                    
+-        ((*%&#&&###(((*&@@@&&&%%#%&&&@&&    ,..,/#%(/**,,***(#*                 
+-      ###@@%%&%&%#%(&&&(( ,(#&&&%&%&%%##%##%%#(/  /%%%#//**#(#####(%%%%##.      
+-    @&%%&&%%&%@@@#@@%%#,#%&@@@&&%%&%&&&@&&&&#&%##%%&%&%&*                       
+-     /          *#*&&,&&&&&@@&&&, %@@( %&&%%&@@@&/&%&&#&&*                      
+-           %#%/(%%&@#%*@@&&&&%%%     #&% &@/&&&%%*%#(#,%@                       
+-      //@.             &&@@&@&&%#%#((   .       %%%%%%#&%                       
+-                         /@(%&@&&/*,/(#&(           &&%%%%%%%&                  
+-                          /&&&&%&%&&%.                   %%%%@&%%##             
+-                            %@                                          *(/ 
++    public void print() {
++
++        System.out.println("\n"+
++        "                        @\n" +
++        "                      &/\n" +
++        "                    &@\n" +
++        "                  %@(\n" +
++        "               (&%\n" +
++        "             /&&&\n" +
++        "          /%@&                                        *\n" +
++        "                 .#&%&                                   .(@ \n" +
++        "                #(@@#(                               *(%@ \n" +
++        "               * #@&@.                           *(.&& \n" +
++        "              ..#&@@@                    .  &**/&&&\n" +
++        "              .#@%&&/   .&&#.          *....(@@(\n" +
++        "             /#%*&&&&&            *, .,  *.#%& \n" +
++        "            ####@&%%@         (/ (( (/,(# &#,\n" +
++        "            ##&&&(&&       (%%*#((,/%*(%%&&%###%#%%%&#/\n" +
++        "           %(&&(@&&#%%%%%%%#(/%&.&.&(%  (/\n" +
++        "           &.*@@&&%%%%%%(%&&%%%@    *( & \n" +
++        "       (*&@@@%@&&& .,#@@@&&&&&%&&&(*%&,& \n" +
++        "    ((*%&#&&###(((*&@@@&&&%%#%&&&@&&    ,..,/#%(**,,***(#* \n" +
++        "  ###@@%%&%&%#%(&&&(( ,(#&&&%&%&%%##%##%%#(/  /%%%#//**#(#####(%%%%##.\n" +
++        "@&%%&&%%&%@@@#@@%%#,#%&@@@&&%%&%&&&@&&&&#&%##%%&%&%&* \n" +
++        " /          *#*&&,&&&&&@@&&&, %@@( %&&%%&@@@&/&%&&#&&* \n" +
++        "       %#%/(%%&@#%*@@&&&&%%%     #&% &@/&&&%%*%#(#,%@ \n" +
++        "   /@.             &&@@&@&&%#%#((   .       %%%%%%#&% \n" +
++        "                     /@(%&@&&/o,/(#&(           &&%%%%%%%& \n" +
++        "                      /&&&&%&%&&%.                   %%%%@&%%## \n" +
++        "                        %@                                       *(/ \n"
++        );
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e0069081-46bd-42db-a1ef-70ecf411a43d\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/desafio-dio-design-patterns.iml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/AtomicBomb.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/AttackMode.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/Machinegun.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/Main.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/RayBeam.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/player/SpaceCraft.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2CJdFgag55dvNcjRlsMYgeOywPr\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"player.Main\" />\n      <module name=\"desafio-dio-design-patterns\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"player.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e0069081-46bd-42db-a1ef-70ecf411a43d\" name=\"Changes\" comment=\"\" />\n      <created>1658524519847</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1658524519847</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3adcbb1325bbdb8e9a975e63f7b0d7b9fb628974)
++++ b/.idea/workspace.xml	(date 1658529263827)
+@@ -1,19 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="e0069081-46bd-42db-a1ef-70ecf411a43d" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/desafio-dio-design-patterns.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/AtomicBomb.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/AttackMode.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/Machinegun.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/RayBeam.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/player/SpaceCraft.java" afterDir="false" />
++    <list default="true" id="e0069081-46bd-42db-a1ef-70ecf411a43d" name="Changes" comment="strategy design pattern">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/player/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/player/Ragnarok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Ragnarok.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -75,6 +66,21 @@
+       <option name="presentableId" value="Default" />
+       <updated>1658524519847</updated>
+     </task>
++    <task id="LOCAL-00001" summary="strategy design pattern">
++      <created>1658528192407</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1658528192407</updated>
++    </task>
++    <task id="LOCAL-00002" summary="strategy design pattern">
++      <created>1658528379694</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1658528379694</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -88,4 +94,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="strategy design pattern" />
++    <option name="LAST_COMMIT_MESSAGE" value="strategy design pattern" />
++  </component>
+ </project>
+\ No newline at end of file

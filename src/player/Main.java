@@ -33,5 +33,8 @@ public class Main {
         }
 
         ragnarok.mode();
+
+        Ragnarok asciiImage = new Ragnarok();
+        asciiImage.print();
     }
 }
