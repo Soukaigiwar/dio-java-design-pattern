@@ -2,7 +2,7 @@ package player;
 
 import java.util.Scanner;
 
-public class Main {
+public class Program {
 
     public static void main(String[] args) {
 
